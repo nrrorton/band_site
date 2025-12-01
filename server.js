@@ -27,7 +27,7 @@ app.post("/submit-booking", async (req, res) => {
 
         await collection.insertOne(data);
 
-        res.json({ success: true, message: "Booking request submitted!" });
+        return res.redirect('/sucess.html');
     } catch (err) {
         console.error("Booking error:", err);
         res.status(500).json({ success: false, error: "Database error." });
@@ -49,7 +49,7 @@ app.post("/submit-song", async (req, res) => {
 
         await collection.insertOne(data);
 
-        res.json({ success: true, message: "Suggestion submitted!" });
+        return res.redirect('/success.html');
     } catch (err) {
         console.error("Suggestion error:", err);
         res.status(500).json({ success: false, error: "Database error." });
