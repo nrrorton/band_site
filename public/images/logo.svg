@@ -1,0 +1,6 @@
+<!-- n2-minimal.svg — 200x200, bold centered N² -->
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img" aria-labelledby="title">
+  <title id="title">N squared logo</title>
+  <rect width="100%" height="100%" rx="24" fill="#0f172a"></rect>
+  <text x="50%" y="55%" text-anchor="middle" fill="#fff" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="700" font-size="84">N<tspan font-size="34" dy="-46" dx="6">2</tspan></text>
+</svg>
