@@ -27,7 +27,7 @@ app.post("/submit-booking", async (req, res) => {
 
         await collection.insertOne(data);
 
-        return res.redirect('/sucess.html');
+        return res.redirect('/success.html');
     } catch (err) {
         console.error("Booking error:", err);
         res.status(500).json({ success: false, error: "Database error." });
