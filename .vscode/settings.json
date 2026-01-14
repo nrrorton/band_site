@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/8c39d1b4-a7f5-4a59-bcc8-6b6b592d88a6/resourceGroups/appsvc_linux_chilecentral/providers/Microsoft.Web/sites/band-site",
-    "appService.deploySubpath": "."
-}
