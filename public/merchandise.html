@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick Squared - Merchandise</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="Nick Squared Logo" style="height: 40px; width: auto; margin-right: 0.5rem; vertical-align: middle;">
+                <span>Nick Squared</span>
+            </a>
+            <div class="navbar-menu" id="navbarMenu">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="merchandise.html">Merch</a>
+                <a class="nav-link" href="booking.html">Book Us</a>
+            </div>
+            <button class="navbar-toggle" id="navbarToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="hero-section">
+        <h1>Nick Squared Merch</h1>
+        <p class="hero-text">Check out our awesome band merchandise! Rock your style with official Nick Squared gear.</p>
+    </div>
+
+    <!-- MERCHANDISE GRID -->
+    <section class="about-section">
+        <h2>Shop Our Collection</h2>
+        <div class="merch-grid">
+            <!-- Pens -->
+            <div class="merch-card">
+                <div class="merch-image-container">
+                    <img src="images/pens.jpg" alt="Nick Squared Pens">
+                    <div class="merch-overlay">
+                        <span>$5.00</span>
+                    </div>
+                </div>
+                <div class="merch-info">
+                    <h3>Pens</h3>
+                    <p>Write with style! Official Nick Squared branded pens.</p>
+                    <div class="merch-price">$5.00</div>
+                </div>
+            </div>
+
+            <!-- Stickers -->
+            <div class="merch-card">
+                <div class="merch-image-container">
+                    <img src="images/sticker.jpg" alt="Nick Squared Stickers">
+                    <div class="merch-overlay">
+                        <span>$2.00</span>
+                    </div>
+                </div>
+                <div class="merch-info">
+                    <h3>Stickers</h3>
+                    <p>Show your support! Durable vinyl stickers perfect for laptops and water bottles.</p>
+                    <div class="merch-price">$2.00</div>
+                </div>
+            </div>
+
+            <!-- Magnets -->
+            <div class="merch-card">
+                <div class="merch-image-container">
+                    <img src="images/magnets.jpg" alt="Nick Squared Magnets">
+                    <div class="merch-overlay">
+                        <span>$5.00</span>
+                    </div>
+                </div>
+                <div class="merch-info">
+                    <h3>Magnets</h3>
+                    <p>Spreading the vibes! Stick our magnet on your fridge and remember the music.</p>
+                    <div class="merch-price">$5.00</div>
+                </div>
+            </div>
+
+            <!-- T-Shirts -->
+            <div class="merch-card">
+                <div class="merch-image-container">
+                    <img src="images/tshirt.jpg" alt="Nick Squared T-Shirt">
+                    <div class="merch-overlay">
+                        <span>$20.00</span>
+                    </div>
+                </div>
+                <div class="merch-info">
+                    <h3>T-Shirt</h3>
+                    <p>Our signature tee! Comfortable, quality fabric with bold Nick Squared design.</p>
+                    <div class="merch-price">$20.00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MERCH NOTICE SECTION -->
+    <section class="about-section">
+        <h2>How to Get Merch</h2>
+        <div style="max-width: 600px; margin: 2rem auto; text-align: center;">
+            <p style="font-size: 1.2rem; color: var(--text-light); line-height: 1.8; margin-bottom: 2rem;">
+                Look for these awesome items at our next show! Come see us perform and grab some Nick Squared merchandise directly. 
+                <br><br>
+                <strong style="color: var(--accent-orange);">Check out our upcoming events</strong> to find where we'll be next.
+            </p>
+            <a href="index.html#events" class="btn btn-primary" style="margin-top: 3rem;">View Upcoming Shows</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="merchandise.html">Merch</a>
+            <a href="booking.html">Book Us</a>
+        </div>
+        <p class="footer-text">© 2026 Nick Squared - A Technical Band Decision. All rights reserved.</p>
+    </footer>
+
+    <style>
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--accent-orange);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                flex-direction: column;
+                background: var(--charcoal);
+                padding: 1rem;
+                width: 100%;
+                border-bottom: 2px solid var(--accent-orange);
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .navbar-toggle {
+                display: block;
+            }
+
+            .merch-grid {
+                grid-template-columns: 1fr 1fr !important;
+            }
+        }
+    </style>
+
+    <script>
+        // Cart management
+        let cart = JSON.parse(localStorage.getItem('nickSquaredCart')) || {};
+
+        function addToCart(item, price) {
+            if (cart[item]) {
+                cart[item].quantity += 1;
+            } else {
+                cart[item] = { price: price, quantity: 1 };
+            }
+            localStorage.setItem('nickSquaredCart', JSON.stringify(cart));
+            updateCart();
+            
+            // Show feedback
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = 'Added! ✓';
+            btn.style.backgroundColor = 'var(--accent-orange-hover)';
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.backgroundColor = '';
+            }, 1500);
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartEmpty = document.getElementById('cartEmpty');
+            const cartBody = document.getElementById('cartBody');
+            const cartTotalSpan = document.getElementById('cartTotal');
+
+            if (Object.keys(cart).length === 0) {
+                cartItems.style.display = 'none';
+                cartEmpty.style.display = 'block';
+            } else {
+                cartItems.style.display = 'block';
+                cartEmpty.style.display = 'none';
+
+                let html = '';
+                let total = 0;
+
+                for (let item in cart) {
+                    const itemTotal = cart[item].price * cart[item].quantity;
+                    total += itemTotal;
+                    html += `
+                        <tr style="border-bottom: 1px solid var(--light-charcoal);">
+                            <td style="padding: 0.75rem; text-align: left;">${item}</td>
+                            <td style="padding: 0.75rem; text-align: center;">
+                                <input type="number" min="1" value="${cart[item].quantity}" style="width: 50px; background: var(--charcoal); border: 1px solid var(--text-muted); color: var(--text-light); padding: 0.25rem; border-radius: 3px;" onchange="updateQuantity('${item}', this.value)">
+                            </td>
+                            <td style="padding: 0.75rem; text-align: right;">$${itemTotal.toFixed(2)}</td>
+                            <td style="padding: 0.75rem; text-align: right;">
+                                <button style="background: none; border: none; color: var(--accent-orange); cursor: pointer; font-size: 1.2rem;" onclick="removeFromCart('${item}')">✕</button>
+                            </td>
+                        </tr>
+                    `;
+                }
+
+                cartBody.innerHTML = html;
+                cartTotalSpan.textContent = total.toFixed(2);
+            }
+        }
+
+        function updateQuantity(item, quantity) {
+            quantity = parseInt(quantity);
+            if (quantity <= 0) {
+                removeFromCart(item);
+            } else {
+                cart[item].quantity = quantity;
+                localStorage.setItem('nickSquaredCart', JSON.stringify(cart));
+                updateCart();
+            }
+        }
+
+        function removeFromCart(item) {
+            delete cart[item];
+            localStorage.setItem('nickSquaredCart', JSON.stringify(cart));
+            updateCart();
+        }
+
+        function clearCart() {
+            if (confirm('Are you sure you want to clear your cart?')) {
+                cart = {};
+                localStorage.setItem('nickSquaredCart', JSON.stringify(cart));
+                updateCart();
+            }
+        }
+
+        function checkout() {
+            const total = Object.values(cart).reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            alert(`Thank you for your order! Total: $${total.toFixed(2)}\\n\\nPlease contact Nick Squared at one of our upcoming shows or events to complete your purchase.`);
+            clearCart();
+        }
+
+        // Initialize cart display on page load
+        updateCart();
+
+        // Mobile menu toggle
+        document.getElementById('navbarToggle').addEventListener('click', function() {
+            document.getElementById('navbarMenu').classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navbarMenu').classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,178 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick Squared - A Technical Band Decision</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Twelfth navbar example">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center mx-auto" href="index.html">
-                <img src="images/logo.svg" alt="Logo" width="40" height="40" class="me-2">Nick Squared
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="Nick Squared Logo" style="height: 40px; width: auto; margin-right: 0.5rem; vertical-align: middle;">
+                <span>Nick Squared</span>
             </a>
-    
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10"
-                aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarsExample10">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-3">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link active" href="suggestions.html">Suggest a Song</a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link active" href="booking.html">Book Us</a>
-                    </li>
-                </ul>
+            <div class="navbar-menu" id="navbarMenu">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="merchandise.html">Merch</a>
+                <a class="nav-link" href="booking.html">Book Us</a>
             </div>
-
+            <button class="navbar-toggle" id="navbarToggle">☰</button>
         </div>
     </nav>
 
-    <div class="px-4 pt-5 my-5 mb-5 text-center border-bottom" class="section-spacing">
-        <div class="overflow-hidden">
-            <div class="container px-5 mb-5"> <img src="images/my_view1.jpg" class="img-fluid border rounded-3 shadow-lg mb-4"
-                    alt="Drummers Eye View" width="700" height="1500" loading="lazy"> </div>
-        </div>
-        <h1 class="display-4 fw-bold text-body-emphasis">Come Check Us Out!</h1>
-        <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Could be you out there next time we play! Feel free to drop us a request 
-             and lookout below for information on our upcoming shows.</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5"> <a href="suggestions.html" class="btn btn-primary btn-lg">
-                Request
-            </a> <a href="booking.html" class="btn btn-primary btn-lg">
-                Book Us
-            </a> </div>
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+        <img src="images/outdoor_drumming.jpg" alt="Outdoor Drumming" class="hero-image">
+        <h1>Come Check Us Out!</h1>
+        <p class="hero-text">Could be you out there next time we play! Check out our upcoming shows and shop our merchandise below.</p>
+        <div class="btn-group">
+            <a href="booking.html" class="btn btn-primary">Book Us</a>
+            <a href="merchandise.html" class="btn btn-primary">Shop Merch</a>
         </div>
     </div>
 
-    <div class="container mt-5 mb-5 pb-5"></div>
-
-    <section class="container my-5 mt-5 mb-10">
-        <h2 class="text-center mt-10 mb-20">About Us</h2>
-            <div class="row gx-5 align-items-start">
-                <div class="col-md-6 mb-4 p-5 text-center">
-                    <img src="images/nick_o.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Nick Orton">
-                    <h3 class="text-center">Nick Orton</h3>
-                    <p>I'm a software engineer in training with a stubborn desire
-                        to do something meaningful before the end.
-                        I'm rebuilding my life piece by piece, and life as a drummer plays a major part in this. So far, enjoying every
-                        bit of it and hoping to share a bit of this with those willing to lend me an ear or two.</p>
+    <!-- GALLERY CAROUSEL -->
+    <section class="gallery-container">
+        <h2 style="margin-top: 0; margin-bottom: 2rem;">Gallery</h2>
+        <div class="carousel-wrapper">
+            <div class="carousel-inner" id="carouselInner">
+                <div class="carousel-item">
+                    <img src="images/1937.jpg" alt="Band Performance 1">
                 </div>
-                <div class="col-md-6 mb-4 p-5 text-center">
-                    <img src="images/nick_s.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Nick Sarwinksi">
-                    <h3 class="text-center">Nick Sarwinski</h3>
-                    <p>Current musician and teacher of children who wants to be successful in every aspect of life. I'm constantly
-                        working to create the best sound possible for the people to hear. I am the younger 'Nick' who sings and plays guitar.</p>
+                <div class="carousel-item">
+                    <img src="images/1938.jpg" alt="Band Performance 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/outdoor_drumming.jpg" alt="Outdoor Drumming">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/image1.jpg" alt="Band Photo 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/image2.jpg" alt="Band Photo 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/image3.jpg" alt="Band Photo 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/my_view1.jpg" alt="Drummer's Eye View">
                 </div>
             </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-btn" id="prevBtn">❮</button>
+            <button class="carousel-btn" id="nextBtn">❯</button>
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
     </section>
 
-    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-        <div class="carousel-indicators"> <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class=""
-                aria-label="Slide 1"></button> <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
-                aria-label="Slide 2" class=""></button> <button type="button" data-bs-target="#myCarousel"
-                data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button> </div>
-        <div class="carousel-inner">
-            <div class="carousel-item">
-                <img src="images/image1.jpg" class="d-block w-100" alt="Band Photo 1">
-                    <div class="container">
-                    </div>
-                </div>
-            <div class="carousel-item">
-                <img src="images/image2.jpg" class="d-block w-100" alt="Band Photo 1">
-                    <div class="container">
-                    </div>
-                </div>
-            <div class="carousel-item active">
-                <img src="images/image3.jpg" class="d-block w-100" alt="Band Photo 1">
-                    <div class="container">
-                    </div>
-                </div>
-        </div> <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev"> <span
-                class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span>
-        </button> <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-    <section class="container my-5">
-        <h2 class="text-center mb-4">Upcoming Events</h2>
-    
-        <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">March 7, 2026</h5>
-                        <h6 class="card-subtitle text-muted mb-2">Kicks Bar & Grill - Galena, KS</h6>
-                        <p class="card-text">
-                            We've been invited back out. Can't wait to rock it again!
-                        </p>
-                        <a href="https://www.facebook.com/profile.php?id=61568492858278" target="_blank" class="btn btn-primary">
-                            Visit Venue Facebook Page
-                        </a>
-                    </div>
-                </div>
+    <!-- ABOUT SECTION -->
+    <section class="about-section">
+        <h2>About Us</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <img src="images/nick_o.jpg" alt="Nick Orton">
+                <h3>Nick Orton</h3>
+                <p>I'm a software engineer in training with a stubborn desire to do something meaningful before the end. I'm rebuilding my life piece by piece, and life as a drummer plays a major part in this. So far, enjoying every bit of it and hoping to share a bit of this with those willing to lend me an ear or two.</p>
             </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">March 14, 2026</h5>
-                        <h6 class="card-subtitle text-muted mb-2">McCarthy's Pub & Grab - Pittsburg, KS</h6>
-                        <p class="card-text">
-                            Making our way here to tear it up for Fake St. Paddy's Day!
-                        </p>
-                        <a href="https://www.facebook.com/p/McCarthys-Pub-Grub-100055616242760/" target="_blank"
-                            class="btn btn-primary">
-                            Visit Venue Facebook Page
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">October 2nd, 2026</h5>
-                        <h6 class="card-subtitle text-muted mb-2">Pickled Pete's Bar & Grill - Frontenac, KS</h6>
-                        <p class="card-text">
-                            What a fun place and we look forward to seeing you there!
-                        </p>
-                        <a href="https://pickledpetesbarandgrill.com/" target="_blank" class="btn btn-primary">
-                            Visit Venue Website
-                        </a>
-                    </div>
-                </div>
+            <div class="about-card">
+                <img src="images/nick_s.jpg" alt="Nick Sarwinski">
+                <h3>Nick Sarwinski</h3>
+                <p>Current musician and teacher of children who wants to be successful in every aspect of life. I'm constantly working to create the best sound possible for the people to hear. I am the younger 'Nick' who sings and plays guitar.</p>
             </div>
         </div>
-
     </section>
 
-    <div class="container">
-        <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="suggestions.html" class="nav-link px-2 text-body-secondary">Suggest A Song</a></li>
-                <li class="nav-item"><a href="booking.html" class="nav-link px-2 text-body-secondary">Book Us</a></li>
-            </ul>
-            <p class="text-center text-body-secondary">© 2025 A Technical Band Decision</p>
-        </footer>
-    </div>
+    <!-- EVENTS SECTION -->
+    <section class="events-section" id="events">
+        <h2>Upcoming Events</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <h5>March 27, 2026</h5>
+                <h6>Corner Patio</h6>
+                <p>Join us for an exciting evening! We're bringing the energy and can't wait to see you there!</p>
+                <a href="https://www.facebook.com/p/The-Corner-Patio-61563140200152/" class="btn btn-primary">Facebook Page</a>
+            </div>
 
-</body>
 
-</html>
+            <div class="event-card">
+                <h5>October 2, 2026</h5>
+                <h6>Pickled Pete's Bar & Grill - Frontenac, KS</h6>
+                <p>What a fun place and we look forward to seeing you there!</p>
+                <a href="https://pickledpetesbarandgrill.com/" target="_blank" class="btn btn-primary">Visit Venue Website</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="merchandise.html">Merch</a>
+            <a href="booking.html">Book Us</a>
+        </div>
+        <p class="footer-text">© 2026 Nick Squared - A Technical Band Decision. All rights reserved.</p>
+    </footer>
+
+    <style>
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--accent-orange);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                flex-direction: column;
+                background: var(--charcoal);
+                padding: 1rem;
+                width: 100%;
+                border-bottom: 2px solid var(--accent-orange);
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .navbar-toggle {
+                display: block;
+            }
+        }
+    </style>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        const carousel = document.getElementById('carouselInner');
+        const items = document.querySelectorAll('.carousel-item');
+        const totalSlides = items.length;
+        const dotsContainer = document.getElementById('carouselDots');
+
+        // Create dots
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(n) {
+            currentSlide = n;
+            updateCarousel();
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+        // Auto-advance carousel every 6 seconds
+        setInterval(nextSlide, 6000);
+
+        // Mobile menu toggle
+        document.getElementById('navbarToggle').addEventListener('click', function() {
+            document.getElementById('navbarMenu').classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navbarMenu').classList.remove('active');
+            });
+        });
+    </script>

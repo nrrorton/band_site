@@ -1,58 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick Squared - Book Us</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Twelfth navbar example">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center mx-auto" href="index.html">
-                <img src="images/logo.svg" alt="Logo" width="40" height="40" class="me-2">Nick Squared
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="Nick Squared Logo" style="height: 40px; width: auto; margin-right: 0.5rem; vertical-align: middle;">
+                <span>Nick Squared</span>
             </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10"
-                aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarsExample10">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-3">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link active" href="suggestions.html">Suggest a Song</a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link active" href="booking.html">Book Us</a>
-                    </li>
-                </ul>
+            <div class="navbar-menu" id="navbarMenu">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="merchandise.html">Merch</a>
+                <a class="nav-link" href="booking.html">Book Us</a>
             </div>
-
+            <button class="navbar-toggle" id="navbarToggle">☰</button>
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Book Us</h1>
-    
-        <form id="bookingForm" method="POST" action="/submit-booking" class="mx-auto" style="max-width: 550px;">
+    <!-- PAGE HERO -->
+    <div class="hero-section">
+        <h1>Book Nick Squared</h1>
+        <p class="hero-text">Ready to bring the energy to your event? Fill out the form below and let's talk!</p>
+    </div>
+
+    <!-- BOOKING FORM -->
+    <div class="form-container">
+        <h2 style="text-align: center; color: var(--accent-orange); margin-bottom: 2rem;">Booking Request</h2>
+        <form id="bookingForm" method="POST" action="/submit-booking">
             <div class="mb-3">
-                <label class="form-label">Your Name</label>
+                <label class="form-label">Your Name *</label>
                 <input type="text" name="name" class="form-control" required>
             </div>
     
             <div class="mb-3">
-                <label class="form-label">Email</label>
+                <label class="form-label">Email *</label>
                 <input type="email" name="email" class="form-control" required>
             </div>
     
@@ -67,25 +56,94 @@
             </div>
     
             <div class="mb-3">
-                <label class="form-label">Message</label>
-                <textarea name="message" class="form-control" rows="4"></textarea>
+                <label class="form-label">Venue Name</label>
+                <input type="text" name="venueName" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Event Details</label>
+                <textarea name="message" class="form-control" rows="4" placeholder="Tell us about your event..."></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Special Song Requests</label>
+                <textarea name="songRequests" class="form-control" rows="3" placeholder="Any songs you'd like us to play? Just let us know!"></textarea>
             </div>
     
-            <button type="submit" class="btn btn-primary w-100 mb-30">Send Request</button>
+            <button type="submit" class="btn btn-primary w-100">Send Booking Request</button>
         </form>
     </div>
-    <div class="container mt-5 mb-5 pb-5"></div>
 
-    <div class="container">
-        <footer class="py-3 my-4 mt-10">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="suggestions.html" class="nav-link px-2 text-body-secondary">Suggest A Song</a></li>
-                <li class="nav-item"><a href="booking.html" class="nav-link px-2 text-body-secondary">Book Us</a></li>
-            </ul>
-            <p class="text-center text-body-secondary">© 2025 A Technical Band Decision</p>
-        </footer>
-    </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="merchandise.html">Merch</a>
+            <a href="booking.html">Book Us</a>
+        </div>
+        <p class="footer-text">© 2026 Nick Squared - A Technical Band Decision. All rights reserved.</p>
+    </footer>
+
+    <style>
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--accent-orange);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                flex-direction: column;
+                background: var(--charcoal);
+                padding: 1rem;
+                width: 100%;
+                border-bottom: 2px solid var(--accent-orange);
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .navbar-toggle {
+                display: block;
+            }
+        }
+    </style>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('navbarToggle').addEventListener('click', function() {
+            document.getElementById('navbarMenu').classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navbarMenu').classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 
